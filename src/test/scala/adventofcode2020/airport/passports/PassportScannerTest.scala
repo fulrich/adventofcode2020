@@ -9,6 +9,6 @@ class PassportScannerTest extends AnyFunSuite with Matchers {
   }
 
   test("Day 4:1 - Can determine the number of valid passports") {
-    PassportScanner.load("airport/passports/passports.txt").validPassports.length shouldBe 2
+    PassportScanner.load("airport/passports/passports.txt").validPassports.length shouldBe 179
   }
 }
