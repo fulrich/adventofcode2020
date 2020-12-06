@@ -1,3 +1,5 @@
+package adventofcode2020
+
 import scala.io.Source
 
 object ResourceLoader {

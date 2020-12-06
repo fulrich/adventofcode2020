@@ -1,3 +1,6 @@
+package adventofcode2020.accounting
+
+import adventofcode2020.ResourceLoader
 import org.scalatest.LoneElement
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatest.matchers.should.Matchers
