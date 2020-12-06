@@ -1,7 +1,7 @@
 package adventofcode2020.tobogganshop
 
 case class CorporatePolicy(minimumAndMaximum: MinimumAndMaximum, letter: Char) {
-  def valid(password: String): Boolean = {
+  def validForSledShop(password: String): Boolean = {
     val occurrences = password.count(_ == letter)
     occurrences >= minimumAndMaximum.minimum && occurrences <= minimumAndMaximum.maximum
   }

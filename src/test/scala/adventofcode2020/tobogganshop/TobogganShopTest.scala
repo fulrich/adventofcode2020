@@ -10,7 +10,7 @@ class TobogganShopTest extends AnyFunSuite with Matchers {
       rawPasswordAndPolicy => PasswordAndPolicy(rawPasswordAndPolicy)
     }
 
-    passwords.count(_.valid) shouldBe 447
+    passwords.count(_.validForSledShop) shouldBe 447
   }
 
 }

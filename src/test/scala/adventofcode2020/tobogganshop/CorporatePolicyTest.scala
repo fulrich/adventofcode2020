@@ -11,9 +11,9 @@ class CorporatePolicyTest extends AnyFunSuite with Matchers {
     CorporatePolicy("1-15 k") shouldBe CorporatePolicy(MinimumAndMaximum(1, 15), 'k')
   }
 
-  test("Can validate policies against a password") {
-    CorporatePolicy(MinimumAndMaximum(1, 3), 'a').valid("abcde") shouldBe true
-    CorporatePolicy(MinimumAndMaximum(1, 3), 'b').valid("cdefg") shouldBe false
-    CorporatePolicy(MinimumAndMaximum(2, 9), 'c').valid("ccccccccc") shouldBe true
+  test("Can validate policies against a password for the sled rental shop") {
+    CorporatePolicy(MinimumAndMaximum(1, 3), 'a').validForSledShop("abcde") shouldBe true
+    CorporatePolicy(MinimumAndMaximum(1, 3), 'b').validForSledShop("cdefg") shouldBe false
+    CorporatePolicy(MinimumAndMaximum(2, 9), 'c').validForSledShop("ccccccccc") shouldBe true
   }
 }

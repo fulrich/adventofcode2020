@@ -10,9 +10,9 @@ class PasswordAndPolicyTest extends AnyFunSuite with Matchers {
     PasswordAndPolicy("2-9 c: ccccccccc") shouldBe PasswordAndPolicy(CorporatePolicy(2, 9, 'c'), "ccccccccc")
   }
 
-  test("Can validate if a password and policy are valid") {
-    PasswordAndPolicy("1-3 a: abcde").valid shouldBe true
-    PasswordAndPolicy("1-3 b: cdefg").valid shouldBe false
-    PasswordAndPolicy("2-9 c: ccccccccc").valid shouldBe true
+  test("Can validate if a password and policy are valid for the sled rental shop") {
+    PasswordAndPolicy("1-3 a: abcde").validForSledShop shouldBe true
+    PasswordAndPolicy("1-3 b: cdefg").validForSledShop shouldBe false
+    PasswordAndPolicy("2-9 c: ccccccccc").validForSledShop shouldBe true
   }
 }
