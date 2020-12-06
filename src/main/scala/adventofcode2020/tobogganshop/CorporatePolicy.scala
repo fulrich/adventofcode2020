@@ -1,10 +1,19 @@
 package adventofcode2020.tobogganshop
 
+import scala.util.Try
+
 case class CorporatePolicy(minimumAndMaximum: MinimumAndMaximum, letter: Char) {
   def validForSledShop(password: String): Boolean = {
     val occurrences = password.count(_ == letter)
     occurrences >= minimumAndMaximum.minimum && occurrences <= minimumAndMaximum.maximum
   }
+
+  def valid(password: String): Boolean = {
+    for {
+      firstChar <- Try(password.charAt(minimumAndMaximum.minimum - 1))
+      secondChar <- Try(password.charAt(minimumAndMaximum.maximum - 1))
+    } yield (firstChar == letter) != (secondChar == letter)
+  }.getOrElse(false)
 }
 
 object CorporatePolicy {

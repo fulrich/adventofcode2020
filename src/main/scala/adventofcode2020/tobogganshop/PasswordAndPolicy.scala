@@ -2,6 +2,7 @@ package adventofcode2020.tobogganshop
 
 case class PasswordAndPolicy(policy: CorporatePolicy, password: String) {
   lazy val validForSledShop: Boolean = policy.validForSledShop(password)
+  lazy val valid: Boolean = policy.valid(password)
 }
 
 object PasswordAndPolicy {
