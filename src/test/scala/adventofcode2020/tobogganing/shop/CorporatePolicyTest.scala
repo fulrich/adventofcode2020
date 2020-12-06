@@ -1,4 +1,4 @@
-package adventofcode2020.tobogganshop
+package adventofcode2020.tobogganing.shop
 
 import org.scalatest.funsuite.AnyFunSuite
 import org.scalatest.matchers.should.Matchers

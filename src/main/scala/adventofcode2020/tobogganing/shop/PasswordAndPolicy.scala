@@ -1,4 +1,4 @@
-package adventofcode2020.tobogganshop
+package adventofcode2020.tobogganing.shop
 
 case class PasswordAndPolicy(policy: CorporatePolicy, password: String) {
   lazy val validForSledShop: Boolean = policy.validForSledShop(password)
